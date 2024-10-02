@@ -1,9 +1,11 @@
-import { StrictMode } from 'react'
+import { Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { RouterProvider } from 'react-router-dom'
+import { appRouter } from './router' 
+import "./index.css"
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <Suspense >
+    <RouterProvider router={appRouter} /> 
+  </Suspense >,
 )
