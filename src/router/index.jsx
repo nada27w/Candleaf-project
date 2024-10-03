@@ -3,6 +3,7 @@ import BasePage from "../components/BasePage";
 import AboutPage from "../pages/about-page";
 
 
+import HomePage from "../pages/home-page";
 export const appRouter = createBrowserRouter(
     [
         {
@@ -11,7 +12,7 @@ export const appRouter = createBrowserRouter(
           children: [
             {
               index: true,
-              element: <>home page</>
+              element:<HomePage/>
             },
             {
               path: "about",
