@@ -1,0 +1,59 @@
+.navDiv
+{
+    width: 100%;
+    height: 75px;
+    @media screen and (max-width: 600px) {
+        .linkNav
+        {
+            width: 100%;
+            flex-wrap: wrap;
+            
+         
+        }
+        .logofNav
+        {
+            display: none;
+        }
+           
+        
+       
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+   
+}
+
+.linkNav a
+{
+  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    text-decoration: none;
+    color: #272727;
+}
+.linkNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 387px;
+    height: 25px;
+}
+.logofNav, .logosNav
+{
+    width: 126px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+}
+@media screen(-webkit-min-device-pixel-ratio) {
+    navDiv{
+        flex]]]
+
+    }
+
+    
+}
