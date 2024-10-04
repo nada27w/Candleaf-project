@@ -42,6 +42,11 @@ const HomePage = () => {
               <Link
                 className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded"
                 key={index}
+                to={`/product?${new URLSearchParams({
+                  imageLink,
+                  productName,
+                  priceNum,
+                }).toString()}`}
               >
                 <img
                   width={100}
@@ -65,6 +70,11 @@ const HomePage = () => {
               <Link
                 className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center "
                 key={index}
+                to={`/product?${new URLSearchParams({
+                  imageLink,
+                  productName,
+                  priceNum,
+                }).toString()}`}
               >
                 <img
                   width={100}
@@ -177,6 +187,11 @@ const HomePage = () => {
               <Link
                 className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded"
                 key={index}
+                to={`/product?${new URLSearchParams({
+                  imageLink,
+                  productName,
+                  priceNum,
+                }).toString()}`}//one obj takes 3 keys 
               >
                 <img
                   width={100}

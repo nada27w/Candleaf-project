@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import BasePage from "../components/BasePage";
 import AboutPage from "../pages/about-page";
-
 import HomePage from "../pages/home-page";
 import ContactUs from "../pages/contact-us";
 import Cart from "../pages/cart";
+import Product from "../pages/product-details"
+
 export const appRouter = createBrowserRouter(
     [
         {
@@ -26,9 +27,13 @@ export const appRouter = createBrowserRouter(
             {
               path:"cart",
               element:<Cart/>
-              
+            },
+            {
+               //you must enter : to ensure that this is a parameter not a page
+              // path:"product/:productName/:price/:image",
+              path:"product",
+              element:<Product/>
             }
-          
           ]
         }
     ]
