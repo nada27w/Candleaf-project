@@ -8,7 +8,7 @@ const AboutPage = () => (
             <img
               src="/src/images/candles.jpeg"
               alt=""
-              className="border rounded"
+              className="border rounded w-100"
             />
           </div>
           <div className="col">
