@@ -37,7 +37,7 @@ const HomePage = () => {
         </div>
         {/*the first 4 cards */}
         <div className="gap-5 d-flex justify-content-center">
-          {productItems.map(({ imageLink, productName, priceNum }, index) => {
+          {productItems.map(({ imageLink, productName, priceNum, id }, index) => {
             return (
               <Link
                 className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded"
@@ -46,6 +46,7 @@ const HomePage = () => {
                   imageLink,
                   productName,
                   priceNum,
+                  id
                 }).toString()}`}
               >
                 <img
@@ -53,7 +54,7 @@ const HomePage = () => {
                   height={150}
                   src={imageLink}
                   alt="not found"
-                  className="w-100 rounded-top"
+                  className="w-100 rounded-top bg-body-tertiary"
                 />
                 <div className="p-2 bg-success w-100 rounded-bottom">
                   <h5 className="text-start">{productName}</h5>
@@ -65,7 +66,7 @@ const HomePage = () => {
         </div>
         {/*the second 4 cards */}
         <div className="gap-5 py-5 d-flex justify-content-center">
-          {productItems2.map(({ imageLink, productName, priceNum }, index) => {
+          {productItems2.map(({ imageLink, productName, priceNum, id }, index) => {
             return (
               <Link
                 className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center "
@@ -74,6 +75,7 @@ const HomePage = () => {
                   imageLink,
                   productName,
                   priceNum,
+                  id
                 }).toString()}`}
               >
                 <img
@@ -81,7 +83,7 @@ const HomePage = () => {
                   height={150}
                   src={imageLink}
                   alt="not found"
-                  className="w-100 rounded-top"
+                  className="w-100 rounded-top bg-body-tertiary"
                 />
                 <div className="p-2 bg-success w-100 border rounded-bottom">
                   <h5 className="text-start">{productName}</h5>
@@ -182,7 +184,7 @@ const HomePage = () => {
         </div>
         {/*the first 4 cards */}
         <div className="gap-5 d-flex justify-content-center pb-5">
-          {productItems.map(({ imageLink, productName, priceNum }, index) => {
+          {productItems.map(({ imageLink, productName, priceNum, id }, index) => {
             return (
               <Link
                 className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded"
@@ -191,6 +193,7 @@ const HomePage = () => {
                   imageLink,
                   productName,
                   priceNum,
+                  id
                 }).toString()}`}//one obj takes 3 keys 
               >
                 <img
@@ -198,7 +201,7 @@ const HomePage = () => {
                   height={150}
                   src={imageLink}
                   alt="not found"
-                  className="w-100 rounded-top"
+                  className="w-100 rounded-top bg-body-tertiary"
                 />
                 <div className="p-2 bg-success w-100 rounded-bottom">
                   <h5 className="text-start">{productName}</h5>
