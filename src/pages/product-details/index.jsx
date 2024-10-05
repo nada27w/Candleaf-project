@@ -92,7 +92,6 @@ const Product = () => {
             <p className="text-success">{priceNum}$</p>
             <div className="pb-5">
               <p className="fw-bold">Quantity:</p>
-
               <input
                 type="number"
                 className="px-2 py-1 border rounded"
