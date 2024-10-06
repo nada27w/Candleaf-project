@@ -1,12 +1,14 @@
 //import hook
 import { useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams ,useNavigate } from "react-router-dom";
 import { products } from "./constants";
+
 
 const Product = () => {
   //use the hook
   const [searchParams] = useSearchParams();
   const [qty, setQty] = useState(1);
+  const navigate=useNavigate()
 
   const imageLink = searchParams.get("imageLink");
   const productName = searchParams.get("productName");
@@ -74,10 +76,11 @@ const Product = () => {
       //push the result to the localStorage
       localStorage.setItem("cartItems", JSON.stringify(cartItemsValue));
     } //JSON.stringify-->
-
     //JSON is an object in javascript has two functions in it
     //stringify >> convert the whatever data you put in it to string
     //parse >> convert any data from string to the correct type in javascript(array, object, boolean, function)
+
+    navigate("/")
   };
 
   return (

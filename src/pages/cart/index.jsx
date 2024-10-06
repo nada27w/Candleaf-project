@@ -21,7 +21,7 @@ const Cart = () => {
   const handleCheckout = ()=>{
     localStorage.removeItem("cartItems")
     localStorage.setItem("order", JSON.stringify(cartItems))
-    navigate("/details-page")
+    navigate("/address-page")
   }
 
   useEffect(() => {
