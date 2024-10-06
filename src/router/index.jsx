@@ -5,7 +5,7 @@ import HomePage from "../pages/home-page";
 import ContactUs from "../pages/contact-us";
 import Cart from "../pages/cart";
 import Product from "../pages/product-details"
-import DetailsPage from "../pages/details-page";
+import AddressPage from "../pages/address-page";
 
 export const appRouter = createBrowserRouter(
     [
@@ -37,8 +37,8 @@ export const appRouter = createBrowserRouter(
             }
             ,
             {
-              path:"details-page",
-              element:<DetailsPage/>
+              path:"address-page",
+              element:<AddressPage/>
             }
 
           ]

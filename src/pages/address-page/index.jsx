@@ -1,7 +1,34 @@
+import { useState } from "react";
 import InheritPage from "../../components/inherit";
+import { useNavigate } from "react-router-dom";
 
 const DetailsPage = () => {
+  //js logic
+  const [formValues, setFormValues] = useState({}); //initalization
+  const navigate = useNavigate();
+
+  const handleChange = (name) => (event) => {
+    const inputValue = event.target.value;
+    setFormValues({
+      ...formValues,
+      [name]: inputValue,
+    });
+  };
+
+  const handleBackToCart = () => {
+    const currentCartItems = localStorage.getItem("order");
+    localStorage.setItem("cartItems", currentCartItems);
+    localStorage.removeItem("order");
+    navigate("/cart");
+  };
+
+  const handleGoToShipping = () => {
+    localStorage.setItem("personDetails", JSON.stringify(formValues))
+    navigate ("/payment-page")
+  };
+
   return (
+    //jsx
     <>
       <div className="d-flex p-5 gap-5 ">
         <div className="w-50">
@@ -19,7 +46,9 @@ const DetailsPage = () => {
               type="text"
               placeholder="Email or mobile phone number"
               aria-label="default input example"
-            ></input>
+              value={formValues.email}
+              onChange={handleChange("email")}
+            />
 
             <div class="form-check">
               <label class="form-check-label">
@@ -38,26 +67,34 @@ const DetailsPage = () => {
                 type="text"
                 placeholder="Name"
                 aria-label="default input example"
-              ></input>
+                value={formValues.firstName}
+                onChange={handleChange("firstName")}
+              />
               <input
                 className="form-control w-50"
                 type="text"
                 placeholder="Second Name"
                 aria-label="default input example"
-              ></input>
+                value={formValues.secondName}
+                onChange={handleChange("secondName")}
+              />
             </div>
             <input
               className="form-control w-100"
               type="text"
               placeholder="Address and number"
               aria-label="default input example"
-            ></input>
+              value={formValues.address}
+              onChange={handleChange("address")}
+            />
             <input
               className="form-control w-100"
               type="text"
               placeholder="Shipping note (optional)"
               aria-label="default input example"
-            ></input>
+              value={formValues.shipping}
+              onChange={handleChange("shipping")}
+            />
 
             <div className="d-flex gap-2 w-100 ">
               <input
@@ -65,30 +102,40 @@ const DetailsPage = () => {
                 type="text"
                 placeholder="City"
                 aria-label="default input example"
-              ></input>
+                value={formValues.city}
+                onChange={handleChange("city")}
+              />
               <input
                 className="form-control w-50"
                 type="text"
                 placeholder="Postal Code"
                 aria-label="default input example"
-              ></input>
+                value={formValues.postalCode}
+                onChange={handleChange("postalCode")}
+              />
               <input
                 className="form-control w-50"
                 type="text"
                 placeholder="Phone Number"
                 aria-label="default input example"
-              ></input>
+                value={formValues.phoneNumber}
+                onChange={handleChange("phoneNumber")}
+              />
             </div>
 
             <div className="d-flex gap-2 w-100 ">
-              <select className="form-select w-100" aria-label="Default select example">
+              <select
+                className="form-select w-100"
+                aria-label="Default select example"
+                value={formValues.country}
+                onChange={handleChange("country")}
+              >
                 <option selected>Country/Region</option>
                 <option value="1">Cairo</option>
                 <option value="2">Italy</option>
                 <option value="3">USA</option>
               </select>
             </div>
-
 
             <div class="form-check">
               <label class="form-check-label">
@@ -98,12 +145,22 @@ const DetailsPage = () => {
             </div>
           </div>
 
-
           <div className=" d-flex  gap-2 w-100 justify-content-between my-2">
-          <button type="button" className=" btn btn-success">Back to Cart</button>
-          <button type="button" class="btn btn-success">Go to shipping</button>
+            <button
+              type="button"
+              className=" btn btn-success"
+              onClick={handleBackToCart}
+            >
+              Back to Cart
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              onClick={handleGoToShipping}
+            >
+              Go to shipping
+            </button>
           </div>
-
         </div>
 
         <InheritPage />
