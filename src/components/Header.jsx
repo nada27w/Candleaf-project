@@ -28,7 +28,7 @@ const Header = () => {
           <Link to="/contact">Contact</Link>
         </div>
         <div className="logosNav">
-          <Link to="/profile">
+         
             <Link to="/cart">
               <FontAwesomeIcon
                 color="#56B280"
@@ -36,7 +36,7 @@ const Header = () => {
                 icon={faCartShopping}
               />
             </Link>
-          </Link>
+       
 
           <Link to="/profile">
             <FontAwesomeIcon color="#56B280" fontSize={30} icon={faUser} />

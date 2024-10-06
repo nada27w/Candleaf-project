@@ -1,5 +1,9 @@
 const InheritPage = () => {
+<<<<<<< HEAD
   const submittedItems = JSON.parse(localStorage.getItem("order"));
+=======
+  const submittedItems = JSON.parse(localStorage.getItem("order") || []);
+>>>>>>> b4197f0 (payment page)
   
   const subTotal = submittedItems.reduce(// reduce  function used to accumulate array elements into a single value
     (acc, item) => acc + item.qty * item.priceNum,// this fun return the total of th quantity *price number 

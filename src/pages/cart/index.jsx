@@ -21,7 +21,11 @@ const Cart = () => {
   const handleCheckout = ()=>{
     localStorage.removeItem("cartItems")
     localStorage.setItem("order", JSON.stringify(cartItems))
+<<<<<<< HEAD
     navigate("/address-page")
+=======
+    navigate("/details-page")
+>>>>>>> b4197f0 (payment page)
   }
 
   useEffect(() => {
