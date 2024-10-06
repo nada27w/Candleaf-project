@@ -161,8 +161,6 @@ const DetailsPage = () => {
             <button
               type="submit"
               class="btn btn-success"
-              // onClick={handleGoToShipping}
-
             >
               Go to shipping
             </button>
