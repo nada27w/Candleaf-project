@@ -1,8 +1,6 @@
-
-
 const ContactUs = () => (
   <>
-    <div className="d-flex flex-column justify-content-center align-items-center flex-wrap contactDiv">
+    <div className="d-flex flex-column justify-content-center align-items-center flex-wrap contactDiv p-4">
       <h1>Contact Us</h1>
 
       <p>
@@ -16,20 +14,35 @@ const ContactUs = () => (
           <h5>
             {" "}
             Customer Support:{" "}
-            <a className="text-decoration-none text-black" href="mailto:support@candleaf.com">Support@candleaf.com</a>
+            <a
+              className="text-decoration-none text-black"
+              href="mailto:support@candleaf.com"
+            >
+              Support@candleaf.com
+            </a>
           </h5>
         </li>
         <li>
           <h5>
             Sales Inquiries:{" "}
-            <a className="text-decoration-none text-black" href="mailto:sales@candleaf.com">Sales@candleaf.com</a>
+            <a
+              className="text-decoration-none text-black"
+              href="mailto:sales@candleaf.com"
+            >
+              Sales@candleaf.com
+            </a>
           </h5>
         </li>
         <li>
           <h5>
             {" "}
             General Information:
-            <a className="text-decoration-none text-black" href="mailto:info@candleaf.com">Info@candleaf.com</a>
+            <a
+              className="text-decoration-none text-black"
+              href="mailto:info@candleaf.com"
+            >
+              Info@candleaf.com
+            </a>
           </h5>
         </li>
       </ul>
@@ -47,25 +60,44 @@ const ContactUs = () => (
       <ul>
         <li>
           <h5>
-            <a className="text-decoration-none text-black" href="https://www.facebook.com/candleaf/">Facebook</a>
+            <a
+              className="text-decoration-none text-black"
+              href="https://www.facebook.com/candleaf/"
+            >
+              Facebook
+            </a>
           </h5>
         </li>
         <li>
           <h5>
-            <a className="text-decoration-none text-black" href="https://twitter.com/candleaf">Twitter</a>
+            <a
+              className="text-decoration-none text-black"
+              href="https://twitter.com/candleaf"
+            >
+              Twitter
+            </a>
           </h5>
         </li>
         <li>
           <h5>
-            <a className="text-decoration-none text-black" href="https://www.instagram.com/candleaf/">Instagram</a>
+            <a
+              className="text-decoration-none text-black"
+              href="https://www.instagram.com/candleaf/"
+            >
+              Instagram
+            </a>
           </h5>
         </li>
         <li>
           <h5>
-            <a className="text-decoration-none text-black" href="https://www.youtube.com/candleaf">YouTube</a>
+            <a
+              className="text-decoration-none text-black"
+              href="https://www.youtube.com/candleaf"
+            >
+              YouTube
+            </a>
           </h5>
         </li>
-
       </ul>
       <h5>Buisness Hours:</h5>
       <ul>
@@ -73,7 +105,6 @@ const ContactUs = () => (
         <li>Saturday: 9:00 AM - 4:00 PM</li>
         <li>Sunday: Closed</li>
       </ul>
-
     </div>
   </>
 );

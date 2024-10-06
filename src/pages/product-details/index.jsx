@@ -80,7 +80,7 @@ const Product = () => {
     //stringify >> convert the whatever data you put in it to string
     //parse >> convert any data from string to the correct type in javascript(array, object, boolean, function)
 
-    navigate("/")
+    navigate("/cart")
   };
 
   return (
@@ -103,7 +103,7 @@ const Product = () => {
               <p className="fw-bold">Quantity:</p>
               <input
                 type="number"
-                className="px-2 py-1 border rounded"
+                className="px-2 py-1 border rounded border-success"
                 onChange={handleQty}
                 value={qty}
               />

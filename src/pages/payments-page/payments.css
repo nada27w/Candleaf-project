@@ -1,12 +1,9 @@
-h5{
-    color: darkgrey;
+h5 {
+  color: darkgrey;
 }
-.cardStyle
-{
-
-
-    p{
+.cardStyle {
+  p {
     color: #3c875f;
     font-size: 16px;
-    }
+  }
 }

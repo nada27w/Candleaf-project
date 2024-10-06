@@ -1,6 +1,6 @@
 import { useState } from "react";
 import InheritPage from "../../components/inherit";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const DetailsPage = () => {
   //js logic
@@ -23,8 +23,8 @@ const DetailsPage = () => {
   };
 
   const handleGoToShipping = () => {
-    localStorage.setItem("personDetails", JSON.stringify(formValues))
-    navigate ("/payment-page")
+    localStorage.setItem("personDetails", JSON.stringify(formValues));
+    navigate("/payment-page");
   };
 
   return (
@@ -36,7 +36,9 @@ const DetailsPage = () => {
             <h1 className="fs-2">Contact</h1>
             <p className="p-2">
               Do you have an account?{" "}
-              <span className=" fw-bold text-success">Login</span>{" "}
+              <Link to="/profile" className=" fw-bold text-success">
+                Login
+              </Link>
             </p>
           </div>
 

@@ -23,13 +23,13 @@ const Header = () => {
           />
         </div>
         <div className="linkNav ">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/" className="hover-box px-3 py-2 border rounded">Home</Link>
+          <Link to="/about" className="hover-box px-3 py-2 border rounded">About</Link>
+          <Link to="/contact" className="hover-box px-3 py-2 border rounded">Contact</Link>
         </div>
-        <div className="logosNav">
+        <div className="logosNav ">
          
-            <Link to="/cart">
+            <Link to="/cart" className="hover-box p-3 border rounded-circle">
               <FontAwesomeIcon
                 color="#56B280"
                 fontSize={30}
@@ -38,7 +38,7 @@ const Header = () => {
             </Link>
        
 
-          <Link to="/profile">
+          <Link to="/profile" className="hover-box p-3 border rounded-circle">
             <FontAwesomeIcon color="#56B280" fontSize={30} icon={faUser} />
           </Link>
         </div>

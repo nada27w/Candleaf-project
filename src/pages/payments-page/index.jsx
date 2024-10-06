@@ -6,23 +6,32 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Payments = () => {
-    const prestonDetails = JSON.parse(localStorage.getItem("personDetails") || {})
+  const prestonDetails = JSON.parse(
+    localStorage.getItem("personDetails") || {}
+  );
 
   return (
     <div className="d-flex  gap-3 p-4">
       <div className="d-flex flex-column w-50 align-items-center">
         <div className="border rounded-3 w-100">
           <div className="d-flex justify-content-between align-items-center">
-            <p className="p-4">contact <span className="fw-bold">{prestonDetails.email}</span></p>
-      
+            <p className="p-4">
+              contact{" "}
+              <span className="fw-bold">
+                {prestonDetails.firstName} {prestonDetails.lastName},{" "}
+                {prestonDetails.email}
+              </span>
+            </p>
           </div>
           <div className="d-flex justify-content-between align-items-center">
-            <p className="p-4">Ship to <span className="fw-bold">{prestonDetails.address}</span></p>
-           
+            <p className="p-4">
+              Ship to <span className="fw-bold">{prestonDetails.address}</span>
+            </p>
           </div>
           <div className="d-flex justify-content-between align-items-center">
-            <p className="p-4">Method <span className="fw-bold">shipping fees : 5$</span></p>
-         
+            <p className="p-4">
+              Method <span className="fw-bold">shipping fees : 5$</span>
+            </p>
           </div>
         </div>
 
@@ -107,10 +116,10 @@ const Payments = () => {
             </div>
           </div>
 
+        </div>
           <Link to="/confirm" className="btn btn-success ">
             Pay Now
           </Link>
-        </div>
       </div>
 
       <Inherit />

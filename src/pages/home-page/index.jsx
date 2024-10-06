@@ -21,77 +21,84 @@ const HomePage = () => {
             className="btn btn-success"
             data-bs-toggle="button"
           >
-            <Link to="/products" className="text-white text-decoration-none ">
+            <a href="/#products" className="text-white text-decoration-none ">
               Discovery our collection
-            </Link>
+            </a>
           </button>
         </div>
       </div>
 
       {/*section-TWO DIV */}
       <div>
-        <div className="gap-2 d-flex text-uppercase align-items-center justify-content-center flex-column p-5">
+        <div
+          className="gap-2 d-flex text-uppercase align-items-center justify-content-center flex-column p-5"
+          id="products"
+        >
           <h1>Products</h1>
           <p>Order it for you or for your beloved ones </p>
           <hr />
         </div>
         {/*the first 4 cards */}
-        <div className="gap-5 d-flex justify-content-center">
-          {productItems.map(({ imageLink, productName, priceNum, id }, index) => {
-            return (
-              <Link
-                className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded"
-                key={index}
-                to={`/product?${new URLSearchParams({
-                  imageLink,
-                  productName,
-                  priceNum,
-                  id
-                }).toString()}`}
-              >
-                <img
-                  width={100}
-                  height={150}
-                  src={imageLink}
-                  alt="not found"
-                  className="w-100 rounded-top bg-body-tertiary"
-                />
-                <div className="p-2 bg-success w-100 rounded-bottom">
-                  <h5 className="text-start">{productName}</h5>
-                  <p className="text-end">{priceNum}$</p>
-                </div>
-              </Link>
-            );
-          })}
+        <div className="gap-5 d-flex justify-content-center first-4-cards">
+          {productItems.map(
+            ({ imageLink, productName, priceNum, id }, index) => {
+              return (
+                <Link
+                  className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded hover-box"
+                  key={index}
+                  to={`/product?${new URLSearchParams({
+                    imageLink,
+                    productName,
+                    priceNum,
+                    id,
+                  }).toString()}`}
+                >
+                  <img
+                    width={100}
+                    height={150}
+                    src={imageLink}
+                    alt="not found"
+                    className="w-100 rounded-top bg-body-tertiary"
+                  />
+                  <div className="p-2 bg-success w-100 rounded-bottom">
+                    <h5 className="text-start">{productName}</h5>
+                    <p className="text-end">{priceNum}$</p>
+                  </div>
+                </Link>
+              );
+            }
+          )}
         </div>
         {/*the second 4 cards */}
-        <div className="gap-5 py-5 d-flex justify-content-center">
-          {productItems2.map(({ imageLink, productName, priceNum, id }, index) => {
-            return (
-              <Link
-                className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center "
-                key={index}
-                to={`/product?${new URLSearchParams({
-                  imageLink,
-                  productName,
-                  priceNum,
-                  id
-                }).toString()}`}
-              >
-                <img
-                  width={100}
-                  height={150}
-                  src={imageLink}
-                  alt="not found"
-                  className="w-100 rounded-top bg-body-tertiary"
-                />
-                <div className="p-2 bg-success w-100 border rounded-bottom">
-                  <h5 className="text-start">{productName}</h5>
-                  <p className="text-end">{priceNum}$</p>
-                </div>
-              </Link>
-            );
-          })}
+        <div className="gap-5 py-5 d-flex justify-content-center ">
+          {productItems2.map(
+            ({ imageLink, productName, priceNum, id }, index) => {
+              return (
+                <Link
+                  className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center hover-box"
+                  key={index}
+                  to={`/product?${new URLSearchParams({
+                    imageLink,
+                    productName,
+                    priceNum,
+                    id,
+                  }).toString()}`}
+                >
+                  <img
+                    width={100}
+                    height={150}
+                    src={imageLink}
+                    alt="not found"
+                    className="w-100 rounded-top  "
+                  />
+                  <div className="p-2 bg-success w-100 border rounded-bottom ">
+                    <h5 className="text-start">{productName}</h5>
+                    <p className="text-end">{priceNum}$</p>
+                  </div>
+                </Link>
+              );
+            }
+          )}
         </div>
       </div>
 
@@ -141,7 +148,7 @@ const HomePage = () => {
               </p>
             </li>
           </ul>
-          <button className="btn btn-success">Learn more</button>
+          <Link className="btn btn-success " to="about">Learn more</Link>
         </div>
       </div>
 
@@ -159,7 +166,7 @@ const HomePage = () => {
           {portfolioItems.map(
             ({ mainImage, starsImage, title, description }, index) => (
               <div
-                className="w-25 d-flex flex-column justify-content-center align-items-center border border-success bg-white rounded px-5"
+                className="w-25 d-flex flex-column justify-content-center align-items-center border border-success bg-white rounded px-5 hover-box"
                 key={index}
               >
                 <img className="w-100 " src={mainImage} alt="not defied " />
@@ -184,32 +191,34 @@ const HomePage = () => {
         </div>
         {/*the first 4 cards */}
         <div className="gap-5 d-flex justify-content-center pb-5">
-          {productItems.map(({ imageLink, productName, priceNum, id }, index) => {
-            return (
-              <Link
-                className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded"
-                key={index}
-                to={`/product?${new URLSearchParams({
-                  imageLink,
-                  productName,
-                  priceNum,
-                  id
-                }).toString()}`}//one obj takes 3 keys 
-              >
-                <img
-                  width={100}
-                  height={150}
-                  src={imageLink}
-                  alt="not found"
-                  className="w-100 rounded-top bg-body-tertiary"
-                />
-                <div className="p-2 bg-success w-100 rounded-bottom">
-                  <h5 className="text-start">{productName}</h5>
-                  <p className="text-end">{priceNum}$</p>
-                </div>
-              </Link>
-            );
-          })}
+          {productItems.map(
+            ({ imageLink, productName, priceNum, id }, index) => {
+              return (
+                <Link
+                  className="text-decoration-none text-black item-card d-flex justify-content-center flex-column align-items-center border rounded hover-box"
+                  key={index}
+                  to={`/product?${new URLSearchParams({
+                    imageLink,
+                    productName,
+                    priceNum,
+                    id,
+                  }).toString()}`} //one obj takes 3 keys
+                >
+                  <img
+                    width={100}
+                    height={150}
+                    src={imageLink}
+                    alt="not found"
+                    className="w-100 rounded-top bg-body-tertiary"
+                  />
+                  <div className="p-2 bg-success w-100 rounded-bottom">
+                    <h5 className="text-start">{productName}</h5>
+                    <p className="text-end">{priceNum}$</p>
+                  </div>
+                </Link>
+              );
+            }
+          )}
         </div>
       </div>
 

@@ -81,14 +81,16 @@ const DetailsPage = () => {
             </div>
 
             <div className="d-flex gap-2 w-100 ">
-              <select className="form-select w-100" aria-label="Default select example">
+              <select
+                className="form-select w-100"
+                aria-label="Default select example"
+              >
                 <option selected>Country/Region</option>
                 <option value="1">Cairo</option>
                 <option value="2">Italy</option>
                 <option value="3">USA</option>
               </select>
             </div>
-
 
             <div class="form-check">
               <label class="form-check-label">
@@ -98,12 +100,14 @@ const DetailsPage = () => {
             </div>
           </div>
 
-
           <div className=" d-flex  gap-2 w-100 justify-content-between my-2">
-          <button type="button" className=" btn btn-success">Back to Cart</button>
-          <button type="button" class="btn btn-success">Go to shipping</button>
+            <button type="button" className=" btn btn-success">
+              Back to Cart
+            </button>
+            <button type="button" class="btn btn-success">
+              Go to shipping
+            </button>
           </div>
-
         </div>
 
         <InheritPage />

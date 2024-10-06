@@ -38,7 +38,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container-fluid text-center">
+      <div className="container-fluid text-center p-4">
         <div className="col justify-content-md-center">
           <div className="row">
             <h2>Your cart items</h2>
