@@ -23,8 +23,10 @@ const DetailsPage = () => {
   };
 
   const handleGoToShipping = () => {
-    localStorage.setItem("personDetails", JSON.stringify(formValues));
-    navigate("/payment-page");
+    if (formValues.firstName){
+      localStorage.setItem("personDetails", JSON.stringify(formValues));
+      navigate("/payment-page");
+    }
   };
 
   return (
@@ -42,19 +44,21 @@ const DetailsPage = () => {
             </p>
           </div>
 
+          <form className="needs-validation" action={handleGoToShipping} novalidate>
           <div className="d-flex justify-content-evenly flex-column gap-3 w-4 py-2 ">
             <input
-              class="form-control"
+              class="form-control needs-validation"
               type="text"
               placeholder="Email or mobile phone number"
               aria-label="default input example"
               value={formValues.email}
               onChange={handleChange("email")}
+              required
             />
 
             <div class="form-check">
               <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" id="" />
+                <input type="checkbox" class="form-check-input" id="" required/>
                 Add me to Candleaf newsletter for a 10% discount
               </label>
             </div>
@@ -64,7 +68,7 @@ const DetailsPage = () => {
           <div className=" d-flex  gap-2 flex-wrap">
             <h1 className="fs-2">Shipping Address</h1>
             <div className="d-flex w-100 gap-2">
-              <input
+              <input required
                 className="form-control w-50"
                 type="text"
                 placeholder="Name"
@@ -72,7 +76,7 @@ const DetailsPage = () => {
                 value={formValues.firstName}
                 onChange={handleChange("firstName")}
               />
-              <input
+              <input required
                 className="form-control w-50"
                 type="text"
                 placeholder="Second Name"
@@ -81,7 +85,7 @@ const DetailsPage = () => {
                 onChange={handleChange("secondName")}
               />
             </div>
-            <input
+            <input required
               className="form-control w-100"
               type="text"
               placeholder="Address and number"
@@ -89,7 +93,7 @@ const DetailsPage = () => {
               value={formValues.address}
               onChange={handleChange("address")}
             />
-            <input
+            <input required
               className="form-control w-100"
               type="text"
               placeholder="Shipping note (optional)"
@@ -99,7 +103,7 @@ const DetailsPage = () => {
             />
 
             <div className="d-flex gap-2 w-100 ">
-              <input
+              <input required
                 className="form-control w-50"
                 type="text"
                 placeholder="City"
@@ -107,7 +111,7 @@ const DetailsPage = () => {
                 value={formValues.city}
                 onChange={handleChange("city")}
               />
-              <input
+              <input required
                 className="form-control w-50"
                 type="text"
                 placeholder="Postal Code"
@@ -115,7 +119,7 @@ const DetailsPage = () => {
                 value={formValues.postalCode}
                 onChange={handleChange("postalCode")}
               />
-              <input
+              <input required
                 className="form-control w-50"
                 type="text"
                 placeholder="Phone Number"
@@ -141,12 +145,11 @@ const DetailsPage = () => {
 
             <div class="form-check">
               <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" id="" />
+                <input required type="checkbox" class="form-check-input" id="" />
                 Save this informations for a future fast checkout
               </label>
             </div>
           </div>
-
           <div className=" d-flex  gap-2 w-100 justify-content-between my-2">
             <button
               type="button"
@@ -156,13 +159,16 @@ const DetailsPage = () => {
               Back to Cart
             </button>
             <button
-              type="button"
+              type="submit"
               class="btn btn-success"
-              onClick={handleGoToShipping}
+              // onClick={handleGoToShipping}
+
             >
               Go to shipping
             </button>
           </div>
+          </form>
+
         </div>
 
         <InheritPage />

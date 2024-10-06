@@ -1,14 +1,14 @@
+import { Link } from "react-router-dom";
 import "./payments.css";
-import Inherit from "../../components/Inherit";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCreditCard } from "@fortawesome/free-regular-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import Inherit from "../../components/Inherit";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Payments = () => {
   const prestonDetails = JSON.parse(
     localStorage.getItem("personDetails") || {}
-  );
+  ) || {}
 
   return (
     <div className="d-flex  gap-3 p-4">
