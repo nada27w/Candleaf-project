@@ -1,9 +1,9 @@
-export const products = [
-    {
-      id: 1,
-      attributes: [
-        { key: 'Burning Time', value: '70-75 hours' },
-        { key: 'Dimension', value: '10cm x 5cm' },
+export const products = [//arr
+    {//obj
+      id: 1,//key
+      attributes: [ //key value arr
+        { key: 'Burning Time', value: '70-75 hours' },//obj gw el arr el soghyr
+        { key: 'Dimension', value: '10cm x 5cm' },//key and val
         { key: 'Weight', value: '400g' },
         { key: 'Wax', value: 'Top grade Soy wax that delivers a smoke less, consistent burn' }
       ]
