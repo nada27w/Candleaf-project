@@ -19,7 +19,7 @@ const DetailsPage = () => {
               type="text"
               placeholder="Email or mobile phone number"
               aria-label="default input example"
-            ></input>
+            />
 
             <div class="form-check">
               <label class="form-check-label">
@@ -38,26 +38,26 @@ const DetailsPage = () => {
                 type="text"
                 placeholder="Name"
                 aria-label="default input example"
-              ></input>
+              />
               <input
                 className="form-control w-50"
                 type="text"
                 placeholder="Second Name"
                 aria-label="default input example"
-              ></input>
+              />
             </div>
             <input
               className="form-control w-100"
               type="text"
               placeholder="Address and number"
               aria-label="default input example"
-            ></input>
+            />
             <input
               className="form-control w-100"
               type="text"
               placeholder="Shipping note (optional)"
               aria-label="default input example"
-            ></input>
+            />
 
             <div className="d-flex gap-2 w-100 ">
               <input
@@ -65,19 +65,19 @@ const DetailsPage = () => {
                 type="text"
                 placeholder="City"
                 aria-label="default input example"
-              ></input>
+              />
               <input
                 className="form-control w-50"
                 type="text"
                 placeholder="Postal Code"
                 aria-label="default input example"
-              ></input>
+              />
               <input
                 className="form-control w-50"
                 type="text"
                 placeholder="Phone Number"
                 aria-label="default input example"
-              ></input>
+              />
             </div>
 
             <div className="d-flex gap-2 w-100 ">
